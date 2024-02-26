@@ -33,7 +33,20 @@ while True:
     if sentence == "quit":
         break
 
+<<<<<<< Updated upstream
     sentence = tokenize(sentence)
+=======
+feedback_requested = False  # Variable to track whether feedback is requested
+
+def get_response(msg):
+    global feedback_requested  # Access the global variable
+    
+    if feedback_requested:
+        feedback_requested = False  # Reset feedback flag
+        return "Thank you for your feedback!", False
+    
+    sentence = tokenize(msg)
+>>>>>>> Stashed changes
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
@@ -48,6 +61,16 @@ while True:
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
+<<<<<<< Updated upstream
                 print(f"{bot_name}: {random.choice(intent['responses'])}")
     else:
         print(f"{bot_name}: I do not understand...")
+=======
+                if tag == "goodbye":
+                    feedback_requested = True
+                    return "Goodbye! Before you go, could you please provide some feedback?", True
+                else:
+                    return random.choice(intent['responses']), False
+
+    return "I do not understand...", False
+>>>>>>> Stashed changes
