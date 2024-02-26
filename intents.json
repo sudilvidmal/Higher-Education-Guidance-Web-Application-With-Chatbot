@@ -79,6 +79,45 @@
           "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
           "What did the buffalo say when his son left for college? Bison."
         ]
-      }
+      }, 
+      {
+        "tag": "sex",
+        "patterns": [
+          "do you own xvideos",
+          "how do you watch porn",
+          "how many hours do you watch porn",
+          "want to have sex with a rich lady"
+        ],
+        "responses": [
+          "xvideos",
+          "pornhub",
+          "thothub.lol",
+          "erothots"
+        ]
+      },
+      {
+        "tag": "NSBM",
+        "patterns": [
+          "what is NSBM",
+          "nsbm"
+         
+        ],
+        "responses": [
+         "NSBM"        ]
+      },
+      {
+        "tag": "review_institution",
+        "patterns": [
+            "What are the reviews for NSBM?",
+            "What are the reviews for Hilton Colombo?",
+            "Tell me about the reviews of {place}",
+            "Show me reviews for {place}",
+            "What do people say about {place}?"
+        ],
+        "responses": [
+            "Let me find the reviews for NSBM.",
+            "Here are some reviews for {place}:"
+        ]
+    }
     ]
   }
