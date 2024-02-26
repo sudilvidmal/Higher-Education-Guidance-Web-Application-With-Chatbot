@@ -27,7 +27,11 @@ model.eval()
 
 bot_name = "Siri"
 
+feedback_requested = False  # Variable to track whether feedback is requested
+
 def get_response(msg):
+    global feedback_requested  # Access the global variable
+    
     sentence = tokenize(msg)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
@@ -43,19 +47,25 @@ def get_response(msg):
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                return random.choice(intent['responses'])
-    
+                if tag == "goodbye":
+                    
+                    feedback_requested = True
+                    
+                    return "Goodbye! Before you go, could you please provide some feedback?"
+                else:
+                    return random.choice(intent['responses'])
+
     return "I do not understand..."
+
+
 
 
 if __name__ == "__main__":
     print("Let's chat! (type 'quit' to exit)")
     while True:
-        # sentence = "do you use credit cards?"
         sentence = input("You: ")
         if sentence == "quit":
             break
 
         resp = get_response(sentence)
         print(resp)
-

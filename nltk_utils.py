@@ -22,3 +22,5 @@ def bag_of_words(tokenized_sentence,all_words):   #matching the words in the arr
 
 
 
+
+
