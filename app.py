@@ -4,6 +4,9 @@ from chat import get_response
 
 app = Flask(__name__)
 
+
+
+
 feedback_requested = False  # Initialize feedback_requested variable
 feedback_text = ""  # Initialize feedback_text variable
 

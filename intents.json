@@ -1,123 +1,272 @@
 {
-    "intents": [
-      {
-        "tag": "greeting",
-        "patterns": [
-          "Hi",
-          "Hey",
-          "How are you",
-          "Is anyone there?",
-          "Hello",
-          "Good day"
-        ],
-        "responses": [
-          "Hey :-)",
-          "Hello, thanks for visiting",
-          "Hi there, what can I do for you?",
-          "Hi there, how can I help?"
-        ]
-      },
-      {
-        "tag": "goodbye",
-        "patterns": ["Bye", "See you later", "Goodbye"],
-        "responses": [
-          "See you later, thanks for visiting",
-          "Have a nice day",
-          "Bye! Come back again soon."
-        ]
-      },
-      {
-        "tag": "thanks",
-        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-        "responses": ["Happy to help!", "Any time!", "My pleasure"]
-      },
-      {
-        "tag": "items",
-        "patterns": [
-          "Which items do you have?",
-          "What kinds of items are there?",
-          "What do you sell?"
-        ],
-        "responses": [
-          "We sell coffee and tea",
-          "We have coffee and tea"
-        ]
-      },
-      {
-        "tag": "payments",
-        "patterns": [
-          "Do you take credit cards?",
-          "Do you accept Mastercard?",
-          "Can I pay with Paypal?",
-          "Are you cash only?"
-        ],
-        "responses": [
-          "We accept VISA, Mastercard and Paypal",
-          "We accept most major credit cards, and Paypal"
-        ]
-      },
-      {
-        "tag": "delivery",
-        "patterns": [
-          "How long does delivery take?",
-          "How long does shipping take?",
-          "When do I get my delivery?"
-        ],
-        "responses": [
-          "Delivery takes 2-4 days",
-          "Shipping takes 2-4 days"
-        ]
-      },
-      {
-        "tag": "funny",
-        "patterns": [
-          "Tell me a joke!",
-          "Tell me something funny!",
-          "Do you know a joke?"
-        ],
-        "responses": [
-          "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-          "What did the buffalo say when his son left for college? Bison."
-        ]
-      }, 
-      {
-        "tag": "sex",
-        "patterns": [
-          "do you own xvideos",
-          "how do you watch porn",
-          "how many hours do you watch porn",
-          "want to have sex with a rich lady"
-        ],
-        "responses": [
-          "xvideos",
-          "pornhub",
-          "thothub.lol",
-          "erothots"
-        ]
-      },
-      {
-        "tag": "NSBM",
-        "patterns": [
-          "what is NSBM",
-          "nsbm"
-         
-        ],
-        "responses": [
-         "NSBM"        ]
-      },
-      {
-        "tag": "review_institution",
-        "patterns": [
-            "What are the reviews for NSBM?",
-            "What are the reviews for Hilton Colombo?",
-            "Tell me about the reviews of {place}",
-            "Show me reviews for {place}",
-            "What do people say about {place}?"
-        ],
-        "responses": [
-            "Let me find the reviews for NSBM.",
-            "Here are some reviews for {place}:"
-        ]
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "Good morning",
+        "Good afternoon",
+        "Greetings",
+        "What's up?",
+        "Yo",
+        "Howdy",
+        "Hey, how's it going?",
+        "Hi, how are you doing?",
+        "Hello there",
+        "Hey, what's happening?"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?",
+        "Good morning! How can I assist you today?",
+        "Good afternoon! What brings you here?",
+        "Greetings! What can I help you with?",
+        "Hey, what's up? Need any assistance?",
+        "Yo! How can I be of service?",
+        "Howdy! What can I do for you today?",
+        "Hey, how's it going? Need help with anything?",
+        "Hi, how are you doing? What can I assist you with?",
+        "Hello there! How may I assist you today?",
+        "Hey, what's happening? How can I help you?"
+      ]
     }
-    ]
-  }
+    ,
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Goodbye",
+        "See you later",
+        "Bye",
+        "Take care",
+        "Farewell",
+        "Have a good one",
+        "Catch you later",
+        "Until next time",
+        "Adios",
+        "So long",
+        "I'm signing off",
+        "I'm out"
+      ],
+      "responses": [
+        "Goodbye, and best of luck with your future endeavors!",
+        "See you later! Take care!",
+        "Bye! Have a great day!",
+        "Take care! Goodbye!",
+        "Farewell! Until we meet again!",
+        "Have a good one! Goodbye!",
+        "Catch you later! Bye!",
+        "Until next time! Take care!",
+        "Adios! Best wishes!",
+        "So long! Farewell!",
+        "I'm signing off. Goodbye!",
+        "I'm out! Take care!"
+      ]
+    }
+    ,
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Appreciate it",
+        "You're awesome",
+        "Thanks a bunch",
+        "I owe you one",
+        "Grateful for your help",
+        "That was really helpful",
+        "Thanks for the assistance",
+        "I'm thankful for your support",
+        "Big thank you",
+        "Much obliged",
+        "I'm so grateful",
+        "Thank you very much"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Glad I could assist!",
+        "It's my pleasure!",
+        "Happy to be of service!",
+        "No problem!",
+        "You're very welcome!",
+        "Always here to help!",
+        "Anytime!",
+        "That's what I'm here for!",
+        "You're too kind!",
+        "I'm here whenever you need me!",
+        "Thank you for your kind words!"
+      ]
+    },
+    {
+      "tag": "degree_programs_inquiry_IT",
+      "patterns": [
+        "Tell me about IT degree programs",
+        "I want to learn about available IT degrees",
+        "Can you provide information on IT degree programs?",
+        "What IT degrees do you offer?",
+        "I'm interested in IT degree programs",
+        "Could you tell me more about your IT degree offerings?",
+        "What kind of IT degrees can I pursue?",
+        "Do you have information on your IT academic programs?",
+        "How can I find out about your IT degree options?",
+        "What IT majors are available?",
+        "I'm considering pursuing an IT degree, where should I start?",
+        "Where can I find information on your IT academic offerings?",
+        "What are the requirements for your IT degree programs?",
+        "Can you give me an overview of your IT academic curriculum?",
+        "I'm curious about the different IT majors you offer",
+        "How can I get details about your IT degree programs?"
+      ],
+      "responses": [
+       
+        "Great! To begin, could you please provide me with some information about your educational background? "
+      ]
+    },
+    {
+      "tag": "educational background O/L",
+      "patterns": [
+        "Successfully completed my O/L examinations.",
+        "Finished my O/Ls with flying colors.",
+        "Just concluded my O/L exams.",
+        "Officially done with my O/L assessments.",
+        "Achieved completion of my O/Ls.",
+        "Completed the O/L phase of my education.",
+        "Exited the O/L examination stage.",
+        "Completed my O/L studies.",
+        "Crossed the finish line with my O/Ls.",
+        "Moved on from my O/L examinations.",
+        "Passed through the O/L phase.",
+        "Completed the requirements for my O/Ls.",
+        "Finalized my O/L examinations.",
+        "Graduated from the O/L level.",
+        "Wrapped up my O/L assessments.",
+        "Reached the end of my O/L journey.",
+        "Concluded my O/L exams successfully.",
+        "Completed all O/L requirements.",
+        "Satisfied the O/L examination criteria.",
+        "Reached the milestone of finishing my O/Ls."
+      ],
+      "responses": [
+      "great ! have you done any foundation program"
+      
+       
+      ]
+    },
+    {
+      "tag": "Foundation",
+      "patterns": [
+        "yes i have done foundation",
+        "I completed a foundation program",
+        "I've finished my foundation studies",
+        "I have a foundation qualification",
+        "Completed foundation courses",
+        "I've completed a foundation year",
+        "I have a foundation certificate",
+        "I've passed my foundation exams",
+        "Finished my pre-university foundation",
+        "Successfully completed my foundation studies",
+        "I've done a foundation course",
+        "Completed my foundation training",
+        "I have a foundation diploma",
+        "I've graduated from my foundation program",
+        "I finished my preparatory foundation",
+        "Completed my foundation year successfully",
+        "I have qualifications from a foundation program",
+        "I've fulfilled the requirements for a foundation",
+        "I've earned my foundation credentials",
+        "I've completed the prerequisite foundation program"
+      ],
+      "responses": [
+        "Great! You can pursue most IT field degrees.\n If you have any particular job or career interests can you tell me that",
+        "That's excellent! With a foundation, you have various options in the IT field.\n If you have any particular job or career interests can you tell me that",
+        "Wonderful! A foundation opens doors to many IT degree programs.\n If you have any particular job or career interests can you tell me that",
+        "Fantastic! With a foundation, you're well-prepared for IT degree studies.\n If you have any particular job or career interests can you tell me that",
+        "Congratulations on completing the foundation program! Many IT degrees await you.\n If you have any particular job or career interests can you tell me that",
+        "Impressive! Your foundation sets a strong base for pursuing IT degrees.\n If you have any particular job or career interests can you tell me that",
+        "Awesome! With your foundation, you're eligible for numerous IT degree courses.\n If you have any particular job or career interests can you tell me that",
+        "Brilliant! Your foundation qualification broadens your possibilities in IT education.\n If you have any particular job or career interests can you tell me that",
+        "Amazing! You're well-equipped with your foundation for further studies in IT.\n If you have any particular job or career interests can you tell me that",
+        "Terrific! Your foundation completion sets you on the path for IT degree success.\n If you have any particular job or career interests can you tell me that",
+        "Superb! Your foundation completion opens up exciting opportunities in IT.\n If you have any particular job or career interests can you tell me that",
+        "Excellent! Your foundation studies pave the way for advanced IT education.\n If you have any particular job or career interests can you tell me that",
+        "Outstanding! Your foundation achievement unlocks many IT degree options.\n If you have any particular job or career interests can you tell me that",
+        "Well done! Your foundation success prepares you for further studies in IT.\n If you have any particular job or career interests can you tell me that",
+        "Impressive accomplishment! Your foundation completion signifies readiness for IT degree programs.\n If you have any particular job or career interests can you tell me that",
+        "Congratulations on your foundation completion! IT degrees are within reach.\n If you have any particular job or career interests can you tell me that",
+        "Fantastic news! Your foundation completion sets the stage for pursuing IT degrees.\n If you have any particular job or career interests can you tell me that",
+        "Bravo! Your foundation success positions you for success in IT degree pursuits.\n If you have any particular job or career interests can you tell me that",
+        "Excellent job! Your foundation completion qualifies you for IT degree programs.\n If you have any particular job or career interests can you tell me that",
+        "Well done! Your foundation achievement marks the beginning of exciting opportunities in IT.\n If you have any particular job or career interests can you tell me that"
+      ]
+    },
+    {
+      "tag": "Non Foundation",
+      "patterns": [
+        "I didn't do any foundation programs",
+        "No, I haven't completed a foundation program",
+        "I skipped foundation programs",
+        "I chose not to do a foundation",
+        "I haven't done any foundation courses",
+        "Foundation programs weren't part of my education",
+        "I didn't pursue a foundation qualification",
+        "I opted out of foundation studies",
+        "I didn't enroll in any foundation courses",
+        "I haven't undertaken any foundation training",
+        "I didn't fulfill the requirements for a foundation",
+        "I didn't meet the criteria for a foundation program",
+        "Foundation studies weren't necessary for me",
+        "I bypassed the foundation stage",
+        "I haven't completed any prerequisites for a foundation",
+        "I decided against doing a foundation",
+        "I didn't go through a foundation year",
+        "I didn't pursue foundation-level education",
+        "I didn't consider foundation courses",
+        "I didn't qualify for a foundation program"
+      ],
+      "responses": [
+        "To pursue a degree, typically a foundation program is required.",
+        "Most degree programs require completion of a foundation program beforehand.",
+        "Usually, you need to complete a foundation course before starting a degree.",
+        "That's correct. Many degree programs have a foundation prerequisite.",
+        "Typically, universities mandate completion of a foundation program for degree entry.",
+        "Yes, foundation programs are often a prerequisite for degree studies.",
+        "Correct. Foundation programs are commonly required for degree admission.",
+        "True. Many degree courses necessitate completion of a foundation year.",
+        "Yes, it's common for degree programs to require a foundation course.",
+        "Indeed, most degree pathways include a foundation requirement.",
+        "Correct. Foundation programs are usually the starting point for degree studies.",
+        "That's right. Foundation qualifications are often required for degree entry.",
+        "Yes, foundation studies are a typical prerequisite for degree programs.",
+        "Indeed, many degree programs expect completion of a foundation year.",
+        "That's correct. Typically, you need to complete a foundation before starting a degree.",
+        "True. Most degree programs require completion of a foundation program first.",
+        "That's correct. Foundation programs are commonly required for degree entry.",
+        "Yes, foundation studies are often required as a pathway to degree programs.",
+        "Correct. Many degree programs require completion of a foundation qualification.",
+        "That's right. Foundation courses are usually a prerequisite for degree studies."
+      ]
+    }
+    ,
+    {
+      "tag": "O/L results",
+      "patterns": [
+        "English A",
+        "English B",
+        "English C",
+        "English S"
+      ],
+      "responses": [
+       
+       
+      ]
+    }
+    
+    
+    
+    
+  ]
+}
