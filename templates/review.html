@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>User Reviews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css"
+        integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" type="text/css" href="../static/review.css" />
+    <link rel="icon" type="image/x-icon" href="../static/images/Chat_favicon.svg">
+</head>
+
+<body>
+    <a id="back-button"></a>
+    <div class="container p-4">
+
+        <div class="col-md-12">
+            <div class="bg-white rounded shadow-sm p-4 mb-4 clearfix">
+                <div class="row">
+
+                    <div class="col-sm-6 d-flex justify-content-start">
+                        <h5 class="mb-0 pt-1">Search for reviews</h5>
+                        <a href="/" class="btn btn-link">Back to chat</a>
+                    </div>
+
+                    <div class="col-sm-6 d-flex justify-content-end">
+                        <form class="d-flex search-box" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-warning" type="submit">Search</button>
+                            <a href="/linkedin/logout" class="ms-4 btn btn-dark">Logout</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded shadow-sm p-4 mb-4">
+                <h5 class="mb-1">Latest Ratings and Reviews</h5>
+                {% for review in initial_reviews %}
+                <div class="reviews-members pt-4 pb-4">
+                    <div class="media">
+                        <img alt="User Image" src="{{ review[1] }}" class="mr-3 rounded-pill">
+                        <div class="media-body pt-2">
+                            <div class="reviews-members-header">
+                                <h6 class="mb-1"><a class="text-black linkedin-profile-link" href="#"
+                                        data-name="{{ review[0] }}">{{ review[0] }}</a></h6>
+
+                            </div>
+                            <div class="reviews-members-body">
+                                <p>{{ review[2] }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                {% endfor %}
+                <a id="seeAllReviews" class="text-center w-100 d-block mt-4 font-weight-bold" href="#">See All
+                    Reviews</a>
+            </div>
+
+            <div class="bg-white rounded shadow-sm p-4 mb-5 rating-review-select-page">
+                <h5 class="mb-4">Share your own experience!</h5>
+                <!-- Add an id to the form -->
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label>Your review</label>
+                        <textarea id="reviewText" class="form-control pt-2"></textarea>
+                    </div>
+                    <div class="form-group pt-3">
+
+                        <button class="btn btn-warning btn-sm" type="button" onclick="submitReview()">Submit
+                            Review</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/review.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

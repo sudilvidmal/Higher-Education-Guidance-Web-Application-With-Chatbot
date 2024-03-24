@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <h1>My First Google Map</h1>
+
+    <div id="googleMap" style="width:100%;height:400px;"></div>
+    <script>
+        var map;
+        var infoWindow;
+
+        async function myMap() {
+
+
+            var mapProp = {
+                center: new google.maps.LatLng(6.9271, 79.8612),
+                zoom: 10,
+            };
+
+
+            map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            infoWindow = new google.maps.InfoWindow({ disableAutoPan: true, closeButton: false });
+
+            // Coordinates for the markers
+            var nsbm = new google.maps.LatLng(6.8213, 80.0416);
+            var sliit = new google.maps.LatLng(6.914682, 79.973329);
+            var nibm = new google.maps.LatLng(6.903663052, 79.868996524);
+            var apiit = new google.maps.LatLng(6.918613484035476, 79.8612225504093);
+            var iit = new google.maps.LatLng(6.865878658474629, 79.85985145651523);
+            var ACBT = new google.maps.LatLng(6.88746187566215, 79.8616517834167);
+            var Londontec = new google.maps.LatLng(6.864950771926306, 79.89610439503578);
+            var cinec = new google.maps.LatLng(6.869339188683875, 79.8881484257209);
+            var sltc = new google.maps.LatLng(6.929987748094107, 79.86148882387182);
+            var icbt = new google.maps.LatLng(6.8863912508489955, 79.86020691250296);
+            var esoft = new google.maps.LatLng(6.888845829114849, 79.85849203311892);
+
+            // Create markers and set their positions
+            var nsbm_marker = new google.maps.Marker({
+                position: nsbm,
+                map: map,
+                title: "NSBM",
+                placeId: "ChIJVVVVBTtS4joRiPT2mc00bFQ"
+            });
+
+            var sliit_marker = new google.maps.Marker({
+                position: sliit,
+                map: map,
+                title: "SLIIT",
+                placeId: "ChIJc5oFb9tW4joRu2RqmUzqX1U"
+            });
+
+            var nibm_marker = new google.maps.Marker({
+                position: nibm,
+                map: map,
+                title: "NIBM",
+                placeId: "ChIJEwfhCHlZ4joRnmTi8WDslFA"
+            });
+
+            var apiit_marker = new google.maps.Marker({
+                position: apiit,
+                map: map,
+                title: "APIIT",
+                placeId: "ChIJA5a98Tc3_4kR00qCNCzOHIk"
+            });
+
+            var iit_marker = new google.maps.Marker({
+                position: iit,
+                map: map,
+                title: "IIT",
+                placeId: "ChIJb66UWQBZ4joRjXf4ZTi32Hk"
+            });
+            var ACBT_marker = new google.maps.Marker({
+                position: ACBT,
+                map: map,
+                title: "ACBT",
+                placeId: "ChIJVV2oZl9b4joRJJBFSypOSUs"
+            });
+            var Londontec_marker = new google.maps.Marker({
+                position: Londontec,
+                map: map,
+                title: "Londontec",
+                placeId: "ChIJseEweF1a4joR-Iqe0xzmlng"
+            });
+            var cinec_marker = new google.maps.Marker({
+                position: cinec,
+                map: map,
+                title: "cinec",
+                placeId: "ChIJteXknNxX4joR5eUUp6y1MIQ"
+            });
+            var sltc_marker = new google.maps.Marker({
+                position: sltc,
+                map: map,
+                title: "sltc",
+                placeId: "ChIJ4UcDdBBZ4joR0o-XUTRymw0"
+            });
+            var icbt_marker = new google.maps.Marker({
+                position: icbt,
+                map: map,
+                title: "icbt",
+                placeId: "ChIJw-rE_cRb4joRuS7XNf3P5_0"
+            });
+            var esoft_marker = new google.maps.Marker({
+                position: esoft,
+                map: map,
+                title: "esoft",
+                placeId: "ChIJAZYZA8Nb4joRi21RZRPjIK4" // Place ID for IIT obtained from Google Maps
+            });
+
+            // Add event listeners to show and hide titles on marker hover
+            addMarkerListeners(nsbm_marker);
+            addMarkerListeners(sliit_marker);
+            addMarkerListeners(nibm_marker);
+            addMarkerListeners(apiit_marker);
+            addMarkerListeners(iit_marker);
+            addMarkerListeners(ACBT_marker);
+            addMarkerListeners(Londontec_marker);
+            addMarkerListeners(cinec_marker);
+            addMarkerListeners(sltc_marker);
+            addMarkerListeners(icbt_marker);
+            addMarkerListeners(esoft_marker);
+        }
+
+        // Function to add event listeners for marker hover
+        function addMarkerListeners(marker) {
+            marker.addListener('mouseover', function () {
+                showInfoWindow(marker);
+            });
+            marker.addListener('mouseout', function () {
+                infoWindow.close(); //
+            });
+            marker.addListener('click', function () {
+                map.panTo(marker.getPosition()); // Pan the map to the marker's position
+                map.setZoom(15); // Set desired zoom level
+                showInfoWindow(marker); // Show info window for the clicked marker
+            });
+        }
+
+        function showInfoWindow(marker) {
+            var placeId = marker.placeId;
+            var service = new google.maps.places.PlacesService(map);
+
+            service.getDetails({
+                placeId: placeId,
+                fields: ['name', 'rating']
+            }, function (place, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    var content = '<strong>' + place.name + '</strong><br>' +
+                        'Rating: ' + (place.rating ? place.rating : 'N/A') + '<span style="color: gold;"> &#9733;</span>';
+
+                    infoWindow.setContent(content);
+                    infoWindow.open(map, marker);
+                } else {
+                    console.error('Error fetching place details:', status);
+                }
+            });
+        }
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVy90FE4evtixL-8e0avAziJz0aajSI7I&libraries=places&callback=myMap"></script>
+
+
+</body>
+
+</html>

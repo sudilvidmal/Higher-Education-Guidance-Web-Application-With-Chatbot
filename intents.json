@@ -1,123 +1,884 @@
 {
-    "intents": [
-      {
-        "tag": "greeting",
-        "patterns": [
-          "Hi",
-          "Hey",
-          "How are you",
-          "Is anyone there?",
-          "Hello",
-          "Good day"
-        ],
-        "responses": [
-          "Hey :-)",
-          "Hello, thanks for visiting",
-          "Hi there, what can I do for you?",
-          "Hi there, how can I help?"
-        ]
-      },
-      {
-        "tag": "goodbye",
-        "patterns": ["Bye", "See you later", "Goodbye"],
-        "responses": [
-          "See you later, thanks for visiting",
-          "Have a nice day",
-          "Bye! Come back again soon."
-        ]
-      },
-      {
-        "tag": "thanks",
-        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-        "responses": ["Happy to help!", "Any time!", "My pleasure"]
-      },
-      {
-        "tag": "items",
-        "patterns": [
-          "Which items do you have?",
-          "What kinds of items are there?",
-          "What do you sell?"
-        ],
-        "responses": [
-          "We sell coffee and tea",
-          "We have coffee and tea"
-        ]
-      },
-      {
-        "tag": "payments",
-        "patterns": [
-          "Do you take credit cards?",
-          "Do you accept Mastercard?",
-          "Can I pay with Paypal?",
-          "Are you cash only?"
-        ],
-        "responses": [
-          "We accept VISA, Mastercard and Paypal",
-          "We accept most major credit cards, and Paypal"
-        ]
-      },
-      {
-        "tag": "delivery",
-        "patterns": [
-          "How long does delivery take?",
-          "How long does shipping take?",
-          "When do I get my delivery?"
-        ],
-        "responses": [
-          "Delivery takes 2-4 days",
-          "Shipping takes 2-4 days"
-        ]
-      },
-      {
-        "tag": "funny",
-        "patterns": [
-          "Tell me a joke!",
-          "Tell me something funny!",
-          "Do you know a joke?"
-        ],
-        "responses": [
-          "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-          "What did the buffalo say when his son left for college? Bison."
-        ]
-      }, 
-      {
-        "tag": "sex",
-        "patterns": [
-          "do you own xvideos",
-          "how do you watch porn",
-          "how many hours do you watch porn",
-          "want to have sex with a rich lady"
-        ],
-        "responses": [
-          "xvideos",
-          "pornhub",
-          "thothub.lol",
-          "erothots"
-        ]
-      },
-      {
-        "tag": "NSBM",
-        "patterns": [
-          "what is NSBM",
-          "nsbm"
-         
-        ],
-        "responses": [
-         "NSBM"        ]
-      },
-      {
-        "tag": "review_institution",
-        "patterns": [
-            "What are the reviews for NSBM?",
-            "What are the reviews for Hilton Colombo?",
-            "Tell me about the reviews of {place}",
-            "Show me reviews for {place}",
-            "What do people say about {place}?"
-        ],
-        "responses": [
-            "Let me find the reviews for NSBM.",
-            "Here are some reviews for {place}:"
-        ]
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "Good morning",
+        "Good afternoon",
+        "Greetings",
+        "What's up?",
+        "Yo",
+        "Howdy",
+        "Hey, how's it going?",
+        "Hi, how are you doing?",
+        "Hello there",
+        "Hey, what's happening?"
+      ],
+      "responses": [
+        "Hi there, what can I do for you? "
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Goodbye",
+        "See you later",
+        "Bye",
+        "Take care",
+        "Farewell",
+        "Have a good one",
+        "Catch you later",
+        "Until next time",
+        "Adios",
+        "So long",
+        "I'm signing off",
+        "I'm out"
+      ],
+      "responses": [
+        "Goodbye, and best of luck with your future endeavors!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Appreciate it",
+        "You're awesome",
+        "Thanks a bunch",
+        "I owe you one",
+        "Grateful for your help",
+        "That was really helpful",
+        "Thanks for the assistance",
+        "I'm thankful for your support",
+        "Big thank you",
+        "Much obliged",
+        "I'm so grateful",
+        "Thank you very much"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Glad I could assist!",
+        "It's my pleasure!",
+        "Happy to be of service!",
+        "No problem!",
+        "You're very welcome!",
+        "Always here to help!",
+        "Anytime!",
+        "That's what I'm here for!",
+        "You're too kind!",
+        "I'm here whenever you need me!",
+        "Thank you for your kind words!"
+      ]
+    },
+    {
+      "tag": "degree_programs_inquiry_IT",
+      "patterns": [
+        "Tell me about IT degree programs",
+        "I want to learn about available IT degrees",
+        "Can you provide information on IT degree programs?",
+        "What IT degrees do you offer?",
+        "I'm interested in IT degree programs",
+        "Could you tell me more about your IT degree offerings?",
+        "What kind of IT degrees can I pursue?",
+        "Do you have information on your IT academic programs?",
+        "How can I find out about your IT degree options?",
+        "What IT majors are available?",
+        "I'm considering pursuing an IT degree, where should I start?",
+        "Where can I find information on your IT academic offerings?",
+        "What are the requirements for your IT degree programs?",
+        "Can you give me an overview of your IT academic curriculum?",
+        "I'm curious about the different IT majors you offer",
+        "How can I get details about your IT degree programs?",
+        "I'm interested in degrees related to Information Technology",
+        "Tell me about studying IT",
+        "I'm curious about IT studies",
+        "What are my options for IT education?",
+        "Can you provide info on Information Technology degrees?",
+        "Tell me more about IT studies",
+        "What can I study in the IT field?",
+        "What degrees are available in IT?",
+        "I want to know about IT courses",
+        "What programs do you have for studying IT?",
+        "I'm looking for information on IT education",
+        "What courses do you offer in IT?",
+        "How can I learn about IT programs?",
+        "Where can I find IT course details?",
+        "What are the academic options for IT?",
+        "Do you offer courses in IT?",
+        "How can I enroll in IT programs?",
+        "I want to study IT - what should I do?",
+        "How can I pursue a degree in IT?",
+        "What are the study pathways for IT?",
+        "I need guidance on IT education",
+        "What qualifications do I need for IT programs?",
+        "Can you assist with IT degree information?",
+        "I need help with IT studies",
+        "Can you explain IT degree pathways?",
+        "I want to explore IT education opportunities",
+        "How do I start studying IT?",
+        "What courses lead to an IT degree?",
+        "I'm interested in learning about IT",
+        "How do I get into IT studies?",
+        "What are the educational routes for IT?",
+        "Can you guide me on IT degree options?",
+        "I'm looking for IT educational paths",
+        "What IT qualifications can I attain?",
+        "Tell me about IT academic options",
+        "I'm interested in pursuing IT academically",
+        "What IT certifications are available?",
+        "How can I specialize in IT?",
+        "What IT specializations can I pursue?",
+        "Can you provide information on IT certifications?",
+        "Tell me about IT career paths"
+      ],
+      "responses": [
+        "Great! To begin, could you please provide me with some information about your educational background(O/L , A/L , )?"
+      ]
+    },
+    {
+      "tag": "educational background O/L",
+      "patterns": [
+        "Successfully completed my O/L examinations.",
+        "Finished my O/Ls with flying colors.",
+        "Just concluded my O/L exams.",
+        "Officially done with my O/L assessments.",
+        "Achieved completion of my O/Ls.",
+        "Completed the o/l phase of my education.",
+        "Exited the O/L examination stage.",
+        "Completed my O/L studies.",
+        "Crossed the finish line with my O/Ls.",
+        "Moved on from my O/L examinations.",
+        "Passed through the O/L phase.",
+        "Completed the requirements for my O/Ls.",
+        "Finalized my O/L examinations.",
+        "Graduated from the O/L level.",
+        "Wrapped up my O/L assessments.",
+        "Reached the end of my O/L journey.",
+        "Concluded my O/L exams successfully.",
+        "Completed all O/L requirements.",
+        "Satisfied the O/L examination criteria.",
+        "Reached the milestone of finishing my O/Ls.",
+        "Done with my O/L exams.",
+        "Completed my O/Ls successfully.",
+        "Finished O/Ls.",
+        "Just finished O/L exams.",
+        "O/L exams completed.",
+        "Done with O/L assessments.",
+        "Completed O/L studies.",
+        "Concluded O/L phase.",
+        "Exited O/L examination stage.",
+        "Graduated O/L level.",
+        "Done with my O levels.",
+        "Completed my O levels.",
+        "Finished my O level exams.",
+        "Just finished my O levels.",
+        "O level exams completed.",
+        "Done with O level assessments.",
+        "Completed O level studies.",
+        "Concluded O level phase.",
+        "Exited O level examination stage.",
+        "Graduated O level level."
+      ],
+      "responses": [
+        "Great! Have you done any foundation program?"
+      ]
+    },
+    {
+      "tag": "educational background A/L",
+      "patterns": [
+        "Successfully completed my A/L examinations.",
+        "Finished my A/Ls with flying colors.",
+        "Just concluded my A/L exams.",
+        "Officially done with my A/L assessments.",
+        "Achieved completion of my A/Ls.",
+        "Completed the A/L phase of my education.",
+        "Exited the A/L examination stage.",
+        "Completed my A/L studies.",
+        "Crossed the finish line with my A/Ls.",
+        "Moved on from my A/L examinations.",
+        "Passed through the A/L phase.",
+        "Completed the requirements for my A/Ls.",
+        "Finalized my A/L examinations.",
+        "Graduated from the A/L level.",
+        "Wrapped up my A/L assessments.",
+        "Reached the end of my A/L journey.",
+        "Concluded my A/L exams successfully.",
+        "Completed all A/L requirements.",
+        "Satisfied the A/L examination criteria.",
+        "Reached the milestone of finishing my A/Ls."
+      ],
+      "responses": [
+        "To pursue most degree programs, you typically need a minimum of three S passes in your A/L examinations. If you don't meet this requirement, some universities offer certificate or foundation programs that you can complete before enrolling in a degree program. Since you have completed your A/Ls, you are eligible to pursue degrees in various IT fields.\n If you have specific job or career interests, please let me know so I can provide further guidance"
+      ]
+    },
+    {
+      "tag": "Foundation",
+      "patterns": [
+        "yes i have done foundation",
+        "I completed a foundation program",
+        "I've finished my foundation studies",
+        "I have a foundation qualification",
+        "Completed foundation courses",
+        "I've completed a foundation year",
+        "I have a foundation certificate",
+        "I've passed my foundation exams",
+        "Finished my pre-university foundation",
+        "Successfully completed my foundation studies",
+        "I've done a foundation course",
+        "Completed my foundation training",
+        "I have a foundation diploma",
+        "I've graduated from my foundation program",
+        "I finished my preparatory foundation",
+        "Completed my foundation year successfully",
+        "I have qualifications from a foundation program",
+        "I've fulfilled the requirements for a foundation",
+        "I've earned my foundation credentials",
+        "I've completed the prerequisite foundation program"
+      ],
+      "responses": [
+        "Great! You can pursue most IT field degrees.\n If you have any particular job or career interests can you tell me that"
+      ]
+    },
+    {
+      "tag": "Non Foundation",
+      "patterns": [
+        "I didn't do any foundation programs",
+        "I didnt do any foundation programs",
+        "No, I haven't completed a foundation program",
+        "I skipped foundation programs",
+        "I chose not to do a foundation",
+        "I haven't done any foundation courses",
+        "Foundation programs weren't part of my education",
+        "I didn't pursue a foundation qualification",
+        "I opted out of foundation studies",
+        "I didn't enroll in any foundation courses",
+        "I haven't undertaken any foundation training",
+        "I didn't fulfill the requirements for a foundation",
+        "I didn't meet the criteria for a foundation program",
+        "Foundation studies weren't necessary for me",
+        "I bypassed the foundation stage",
+        "I haven't completed any prerequisites for a foundation",
+        "I decided against doing a foundation",
+        "I didn't go through a foundation year",
+        "I didn't pursue foundation-level education",
+        "I didn't consider foundation courses",
+        "I didn't qualify for a foundation program"
+      ],
+      "responses": [
+        "To pursue a degree, typically a foundation program is required.i recommended to do foundation program first \n If you want to know which degree programs are most suitable for you, please provide your job interests that you process"
+      ]
+    },
+    {
+      "tag": "software engineer Job",
+      "patterns": [
+        "software engineer",
+        "software developper"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSC (HONS) COMPUTER SCIENCE \n BSC (HONS) IN SOFTWARE ENGINEERING\n BSC (HONS) IN DATA SCIENCE \n BSc (Hons) in Cloud Computing \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "System Analyst",
+      "patterns": [
+        "System Analyst"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) Computer Science \n BSC (HONS) IN SOFTWARE ENGINEERING \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Quality Assurance Engineer",
+      "patterns": [
+        "Quality Assurance Engineer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) Computer Science \n BSC (HONS) IN SOFTWARE ENGINEERING \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Computer Scientist",
+      "patterns": [
+        "Computer Scientist"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) Computer Science \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "UI Engineer",
+      "patterns": [
+        "UI Engineer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) Computer Science \n BSC (HONS) IN SOFTWARE ENGINEERING \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Big Data Engineer",
+      "patterns": [
+        "Big Data Engineer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) Computer Science \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Database Engineer",
+      "patterns": [
+        "Database Engineer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) Computer Science \n BSC (HONS) IN SOFTWARE ENGINEERING \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Web Designer",
+      "patterns": [
+        "Web Designer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) Computer Science \n BSC (HONS) IN SOFTWARE ENGINEERING \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Data Scientist",
+      "patterns": [
+        "Data Scientist"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) in Data Science \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Machine Learning Engineers",
+      "patterns": [
+        "Machine Learning Engineers"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) in Data Science \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "BI Engineers",
+      "patterns": [
+        "BI Engineers"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) in Data Science \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Consultants",
+      "patterns": [
+        "Consultants"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) in Data Science \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Web Analytics Engineers",
+      "patterns": [
+        "Web Analytics Engineers"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) in Data Science \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Deployment Engineers",
+      "patterns": [
+        "Deployment Engineers"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) in Data Science \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Computer Scientists",
+      "patterns": [
+        "Computer Scientists"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) in Data Science \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Research Engineers",
+      "patterns": [
+        "Research Engineers"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) in Data Science \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Research Scholars",
+      "patterns": [
+        "Research Scholars"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) in Data Science \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Network Engineer",
+      "patterns": [
+        "Network Engineer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) Computer Networks \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Network Administrator",
+      "patterns": [
+        "Network Administrator"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) Computer Networks \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Network Analyst",
+      "patterns": [
+        "Network Analyst"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) Computer Networks \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Network Technician",
+      "patterns": [
+        "Network Technician"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) Computer Networks \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "VOIP Engineer",
+      "patterns": [
+        "VOIP Engineer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) Computer Networks \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Security Engineer",
+      "patterns": [
+        "Security Engineer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSC (HONS) COMPUTER SECURITY \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Security Architect",
+      "patterns": [
+        "Security Architect"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSC (HONS) COMPUTER SECURITY \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Security Software Developer",
+      "patterns": [
+        "Security Software Developer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSC (HONS) COMPUTER SECURITY \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Cryptanayst",
+      "patterns": [
+        "Cryptanayst"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSC (HONS) COMPUTER SECURITY \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Security Analyst",
+      "patterns": [
+        "Security Analyst"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSC (HONS) COMPUTER SECURITY \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Cryptographer",
+      "patterns": [
+        "Cryptographer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSC (HONS) COMPUTER SECURITY \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Security Administrator",
+      "patterns": [
+        "Security Administrator"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSC (HONS) COMPUTER SECURITY \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": " IT auditor",
+      "patterns": [
+        " IT auditor"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": " Penetration tester",
+      "patterns": [
+        " Penetration tester"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Malware Analyst",
+      "patterns": [
+        "Malware Analyst"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Computer Forensics Analyst",
+      "patterns": [
+        "Computer Forensics Analyst"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Data recovery professional",
+      "patterns": [
+        "Data recovery professional"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "SOC Analyst",
+      "patterns": [
+        "SOC Analyst"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Blockchain Developer",
+      "patterns": [
+        "Blockchain Developer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Cyber Security Risk Analyst",
+      "patterns": [
+        "Cyber Security Risk Analyst"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Threat & Vulnerability Analyst",
+      "patterns": [
+        "Threat & Vulnerability Analyst"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Cyber security specialist,",
+      "patterns": [
+        "Cyber security specialist"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "cyber security consultant",
+      "patterns": [
+        "cyber security consultant"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "cloud security engineer",
+      "patterns": [
+        "cloud security engineer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "network security engineer",
+      "patterns": [
+        "network security engineer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BACHELOR OF INFORMATION TECHNOLOGY (MAJOR IN CYBER SECURITY) \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "System Support Engineer",
+      "patterns": [
+        "System Support Engineer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSC (HONS) IN SOFTWARE ENGINEERING \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "AI engineer",
+      "patterns": [
+        "AI engineer"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) Artificial Intelligence And Data Science \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": " Cloud Computing",
+      "patterns": [
+        "Software Engineers in Cloud Computing",
+        "Cloud Engineer",
+        " Cloud System Engineer",
+        "Cloud Service Developer",
+        "Cloud System Administrators"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSc (Hons) in Cloud Computing \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "Business Analyst",
+      "patterns": [
+        "Business Analyst"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSC (HONS) TECHNOLOGY MANAGEMENT \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "IT consultan",
+      "patterns": [
+        "IT consultant"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSC (HONS) TECHNOLOGY MANAGEMENT \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "ERP consultan",
+      "patterns": [
+        "ERP consultant"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSC (HONS) TECHNOLOGY MANAGEMENT \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "IT Project manager",
+      "patterns": [
+        "IT Project manager"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSC (HONS) TECHNOLOGY MANAGEMENT \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "IT Managers",
+      "patterns": [
+        "IT Managers"
+      ],
+      "responses": [
+        "Here are some degree programs you can pursue \n BSC (HONS) TECHNOLOGY MANAGEMENT \n Please suggest degree program that you're interested in, so I can find universities that offer them for your advanced studies."
+      ]
+    },
+    {
+      "tag": "BSC (HONS) IN SOFTWARE ENGINEERING",
+      "patterns": [
+        "BSC (HONS) IN SOFTWARE ENGINEERING",
+        "BSC software enginnering",
+        "Software engineering degree",
+        "Degree in software development",
+        "Bachelor's in software engineering",
+        "Software engineering program",
+        "Software engineering course",
+        "Study software engineering",
+        "Software engineering education",
+        "Pursue a degree in software engineering",
+        "Software engineering undergraduate program",
+        "Software engineering major"
+      ],
+      "responses": [
+        "These are universities, along with their respective entry qualifications, based on your interest in degree programs \n NSBM Green University - 3 passes for Advanced Level in a single attempt for core subjects (Local or International equivalent) (London AS Level exams are not recognized as entry criteria).Completion of NSBM foundation programme. Completion of Edexcel or BTEC Certified foundation programme (*Subject to the approval of program director).Completion of any other foreign university affiliated foundation programme (*Subject to the approval of program director) And.Students should have passed Ordinary Level examination or equivalent including Mathematics and English  \n SLIIT - Minimum 3 S passes in G.C.E A/L (Sri Lanka) or a minimum 3 D passes in G.C.E A/L Cambridge or Edexcel (in any subject stream) in one and the same sitting, and pass the Aptitude Test conducted by SLIIT. To progress from the second year to the third year of the specialization, a student must meet the minimum GPA requirement specified by the faculty. \n ACBT Campus - A Levels  -  A score of 5 Calculated from a minimum of 2 and a maximum of 3 A Level subjects. Local A/L calculate points: A=5, B=4, C=3, S=1  UK A/L calculate points  A=5, B=4, C=3, D=2, E=1  \n CINEC Metro Campus - G.C.E. A/L Any Stream 1C and 2S passes (Local) or 1C, 2D (London) + 5 Credit Passes for O/L (London /Local) including Credits for Mathematics Science and English or Foundation + 5 Credit Passes for O/L (London /Local) including Credits for Mathematics Science and English  \n APIIT Sri Lanka - Sri Lankan: 3 passes or London, Cambridge or Edexcel : 3 D passes or Asia Pacific Institute of Information Technology Degree Foundation  \n         SLTC University - (i) Three (3) Simple passes (“S”) in Physical Science stream or Engineering Technology stream in one and the same sitting at the GCE A/L (Advanced Level) .Examination conducted by the Department of Examinations of Sri Lanka or equivalent qualification Or (ii) Three (3) Simple passes (“S”) in any stream in one and the same sitting at the GCE A/L (Advanced Level) Examination conducted by the Department of Examinations of Sri Lanka or equivalent qualification and a Credit Pass (C) in Mathematics at the GCE O/L (Ordinary Level) Examination conducted by the Department of Examinations of Sri Lanka or equivalent qualification with the SLTC bridging program \n ICBT University -  G.C.E. A/L 03 Passes Can apply with pending results.\n ESOFT - Credit pass for English in GCE O/L OR GCE A/L OR Equivalent or Pearson BTEC HND in Computing / IT / IS OR BCS Diploma OR NCC IAD \n Informatics Institute of Technology (IIT) University"
+      ]
+    },
+    {
+      "tag": "BSc (Hons) Computer Science",
+      "patterns": [
+        "BSc (Hons) Computer Science",
+        "bsc computer science",
+        "Computer science degree",
+        "Degree in computer science",
+        "Bachelor's in computer science",
+        "Computer science program",
+        "Computer science course",
+        "Study computer science",
+        "Computer science education",
+        "Pursue a degree in computer science",
+        "Computer science undergraduate program",
+        "Computer science major"
+      ],
+      "responses": [
+        "These are universities, along with their respective entry qualifications, based on your interest in degree programs \n NSBM Green University - 3 passes for Advanced Level in a single attempt for core subjects (Local or International equivalent) (London AS Level exams are not recognized as entry criteria).Completion of NSBM foundation programme. Completion of Edexcel or BTEC Certified foundation programme (*Subject to the approval of program director).Completion of any other foreign university affiliated foundation programme (*Subject to the approval of program director) And.Students should have passed Ordinary Level examination or equivalent including Mathematics and English  \n SLIIT - Minimum 3 S passes in G.C.E A/L (Sri Lanka) or a minimum 3 D passes in G.C.E A/L Cambridge or Edexcel (in any subject stream) in one and the same sitting, and pass the Aptitude Test conducted by SLIIT. To progress from the second year to the third year of the specialization, a student must meet the minimum GPA requirement specified by the faculty. \n ACBT Campus - A Levels  -  A score of 5 Calculated from a minimum of 2 and a maximum of 3 A Level subjects. Local A/L calculate points: A=5, B=4, C=3, S=1  UK A/L calculate points  A=5, B=4, C=3, D=2, E=1  \n CINEC Metro Campus - G.C.E. A/L Any Stream 1C and 2S passes (Local) or 1C, 2D (London) + 5 Credit Passes for O/L (London /Local) including Credits for Mathematics Science and English or Foundation + 5 Credit Passes for O/L (London /Local) including Credits for Mathematics Science and English  \n APIIT Sri Lanka - Sri Lankan: 3 passes or London, Cambridge or Edexcel : 3 D passes or Asia Pacific Institute of Information Technology Degree Foundation  \n         SLTC University - (i) Three (3) Simple passes (“S”) in Physical Science stream or Engineering Technology stream in one and the same sitting at the GCE A/L (Advanced Level) .Examination conducted by the Department of Examinations of Sri Lanka or equivalent qualification Or (ii) Three (3) Simple passes (“S”) in any stream in one and the same sitting at the GCE A/L (Advanced Level) Examination conducted by the Department of Examinations of Sri Lanka or equivalent qualification and a Credit Pass (C) in Mathematics at the GCE O/L (Ordinary Level) Examination conducted by the Department of Examinations of Sri Lanka or equivalent qualification with the SLTC bridging program \n ICBT University -  G.C.E. A/L 03 Passes Can apply with pending results.\n ESOFT - Credit pass for English in GCE O/L OR GCE A/L OR Equivalent or Pearson BTEC HND in Computing / IT / IS OR BCS Diploma OR NCC IAD"
+      ]
+    },
+    {
+      "tag": "BSc (Hons) in Data Science",
+      "patterns": [
+        "BSc (Hons) in Data Science",
+        "bsc in data science",
+        "Data science degree",
+        "Degree in data science",
+        "Bachelor's in data science",
+        "Data science program",
+        "Data science course",
+        "Study data science",
+        "Data science education",
+        "Pursue a degree in data science",
+        "Data science undergraduate program",
+        "Data science major"
+      ],
+      "responses": [
+        "These are universities, along with their respective entry qualifications, based on your interest in degree programs \n NSBM Green University - G.C.E. Advanced Level examination conducted by the Department of Examinations, Sri Lanka. or G.C.E Advanced Level examination conducted by Pearson Edexcel, UK (London A/L). or International Advanced Level examination conducted by Pearson Edexel, UK. or G.S.E Advanced Level examination conducted by Cambridge International Examination, UK \n         SLIIT - Minimum 3 “S” passes in G.C.E A/L (Sri Lanka) or a minimum 3” D” passes in G.C.E A/L Cambridge or Edexcel (in any subject stream) in one and the same sitting, and pass the Aptitude Test conducted by SLIIT. To progress from the second year to the third year of the specialization, a student must meet the minimum GPA requirement specified by the faculty. \n ICBT University - HD/HND in Software Engineering + Computing or Any Other Equivalent Qualification (Case By Case Approval) \n SLTC University - (i) Three (3) Simple passes (“S”) in Physical Science stream or Engineering Technology stream in one and the same sitting at the GCE A/L (Advanced Level) .Examination conducted by the Department of Examinations of Sri Lanka or equivalent qualification Or (ii) Three (3) Simple passes (“S”) in any stream in one and the same sitting at the GCE A/L (Advanced Level) Examination conducted by the Department of Examinations of Sri Lanka or equivalent qualification and a Credit Pass (“C”) in Mathematics at the GCE O/L (Ordinary Level) Examination conducted by the Department of Examinations of Sri Lanka or equivalent qualification with the SLTC bridging program \n  ESOFT - GCSE or O-Level in English and Mathematics at grade C or above or 240 credits with at least a Merit from a Higher National Diploma (HND), at least 2:2 (or equivalent) from a Foundation Degree (FdA/ FdSc) or equivalent international qualification in a relevant subject or 240 credits at least 2:2 (or equivalent) from years 1 and 2 of an undergraduate degree (BA/BSc) in a relevant subject at a different institution \n Informatics Institute of Technology (IIT) University \n NIBM University"
+      ]
+    },
+    {
+      "tag": "BSc (Hons) Computer Networks ",
+      "patterns": [
+        "BSc (Hons) Computer Networks ",
+        "bsc computer network",
+        "Computer networks degree",
+        "Degree in computer networks",
+        "Bachelor's in computer networks",
+        "Computer networks program",
+        "Computer networks course",
+        "Study computer networks",
+        "Computer networks education",
+        "Pursue a degree in computer networks",
+        "Computer networks undergraduate program",
+        "Computer networks major"
+      ],
+      "responses": [
+        "These are universities, along with their respective entry qualifications, based on your interest in degree programs \n NSBM Green University - 3 passes for Advanced Level in a single attempt for core subjects (Local or International equivalent) (London AS Level exams are not recognized as entry criteria).Completion of NSBM foundation programme. Completion of Edexcel or BTEC Certified foundation programme (*Subject to the approval of program director).Completion of any other foreign university affiliated foundation programme (*Subject to the approval of program director) And.Students should have passed Ordinary Level examination or equivalent including Mathematics and English  \n SLIIT - Minimum 3 S passes in G.C.E A/L (Sri Lanka) or a minimum 3 D passes in G.C.E A/L Cambridge or Edexcel (in any subject stream) in one and the same sitting, and pass the Aptitude Test conducted by SLIIT. To progress from the second year to the third year of the specialization, a student must meet the minimum GPA requirement specified by the faculty. \n CINEC Metro Campus - G.C.E. A/L Any Stream 1C and 2S passes (Local) or 1C, 2D (London) + 5 Credit Passes for O/L (London /Local) including Credits for Mathematics Science and English or Foundation + 5 Credit Passes for O/L (London /Local) including Credits for Mathematics Science and English  \n APIIT Sri Lanka - Sri Lankan: 3 passes or London, Cambridge or Edexcel : 3 D passes or Asia Pacific Institute of Information Technology Degree Foundation  \n         SLTC University - (i) Three (3) Simple passes (“S”) in Physical Science stream or Engineering Technology stream in one and the same sitting at the GCE A/L (Advanced Level) .Examination conducted by the Department of Examinations of Sri Lanka or equivalent qualification Or (ii) Three (3) Simple passes (“S”) in any stream in one and the same sitting at the GCE A/L (Advanced Level) Examination conducted by the Department of Examinations of Sri Lanka or equivalent qualification and a Credit Pass (C) in Mathematics at the GCE O/L (Ordinary Level) Examination conducted by the Department of Examinations of Sri Lanka or equivalent qualification with the SLTC bridging program \n ICBT University - HD/ HND in Computing / Networking or Any Other Equivalent Qualification (Case by Case Approval) \n ESOFT - Credit pass for English in GCE O/L OR GCE A/L OR Equivalent or Pearson BTEC HND in Computing / IT / IS OR BCS Diploma OR NCC IAD \n Informatics Institute of Technology (IIT) University"
+      ]
+    },
+    {
+      "tag": "BSc (Hons) Computer Security",
+      "patterns": [
+        "BSc (Hons) Computer Security",
+        "bsc computer security",
+        "cyber security",
+        "Computer security degree",
+        "Degree in computer security",
+        "Bachelor's in computer security",
+        "Computer security program",
+        "Computer security course",
+        "Study computer security",
+        "Computer security education",
+        "Pursue a degree in computer security",
+        "Computer security undergraduate program",
+        "Computer security major",
+        "Cybersecurity degree",
+        "Degree in cybersecurity",
+        "Bachelor's in cybersecurity",
+        "Cybersecurity program",
+        "Cybersecurity course",
+        "Study cybersecurity",
+        "Cybersecurity education",
+        "Pursue a degree in cybersecurity",
+        "Cybersecurity undergraduate program",
+        "Cybersecurity major"
+      ],
+      "responses": [
+        "These are universities, along with their respective entry qualifications, based on your interest in degree programs \n NSBM Green University -  3 passes for Advanced Level in a single attempt for core subjects (Local or International equivalent) (London AS Level exams are not recognized as entry criteria).Completion of NSBM foundation programme. Completion of Edexcel or BTEC Certified foundation programme (*Subject to the approval of program director).Completion of any other foreign university affiliated foundation programme (*Subject to the approval of program director) And.Students should have passed Ordinary Level examination or equivalent including Mathematics and English  \n SLIIT - Minimum 3 “S” passes in G.C.E A/L (Sri Lanka) or a minimum 3” D” passes in G.C.E A/L Cambridge or Edexcel (in any subject stream) in one and the same sitting, and pass the Aptitude Test conducted by SLIIT. To progress from the second year to the third year of the specialization, a student must meet the minimum GPA requirement specified by the faculty. \n ECU Campus - A Levels  -  A score of 5 Calculated from a minimum of 2 and a maximum of 3 A Level subjects. Local A/L calculate points: A=5, B=4, C=3, S=1  UK A/L calculate points: A=5, B=4, C=3, D=2, E=1  \n APIIT Sri Lanka - Sri Lankan: 3 passes or London, Cambridge or Edexcel : 3 D passes or Asia Pacific Institute of Information Technology Degree Foundation"
+      ]
+    },
+    {
+      "tag": "Bachelor of Information Technology (Major in Cyber Security) ",
+      "patterns": [
+        "Bachelor of Information Technology (Major in Cyber Security)"
+      ],
+      "responses": [
+        "These are universities, along with their respective entry qualifications, based on your interest in degree programs \n NSBM Green University - Sri Lankan A Levels: 3 unit passes in the first attempt. Sri Lankan A Levels: 2 unit passes + Completion of NSBM Certificate Programme  or Sri Lankan O Levels: 6 unit passes (with 3 units at credit level) + Completion of NSBM Foundation Programme or Completion of Edexcel or BTEC Level 3 Certified International Foundation Programme (* subject to approval of VU Course Chair) orCompletion of any other foreign university-affiliated Foundation Programme (* subject to approval of VU Course Chair)"
+      ]
+    },
+    {
+      "tag": "BSC (HONS) TECHNOLOGY MANAGEMENT",
+      "patterns": [
+        "BSC (HONS) TECHNOLOGY MANAGEMENT",
+        "bsc technology management",
+        "Bachelor of Science in Technology Management",
+        "Technology Management Honors Program",
+        "Undergraduate Technology Management Degree",
+        "BSc Tech Management",
+        "Technology Management Bachelor's Program",
+        "BSC (Hons) in Tech Management",
+        "Degree in Technology and Business Management",
+        "Tech Management Undergrad",
+        "Bachelor's Degree in Technology Leadership",
+        "BSC (Hons) Tech Management Program",
+        "Study Program: Technology Management",
+        "Tech Management Major",
+        "Bachelor of Science in Business and Technology Management"
+      ],
+      "responses": [
+        "These are universities, along with their respective entry qualifications, based on your interest in degree programs \n NSBM Green University - Sri Lankan A Levels: 3 unit passes in the first attempt. Sri Lankan A Levels: 2 unit passes + Completion of NSBM Certificate Programme  or Sri Lankan O Levels: 6 unit passes (with 3 units at credit level) + Completion of NSBM Foundation Programme or Completion of Edexcel or BTEC Level 3 Certified International Foundation Programme (* subject to approval of VU Course Chair) orCompletion of any other foreign university-affiliated Foundation Programme (* subject to approval of VU Course Chair)"
+      ]
+    },
+    {
+      "tag": "",
+      "patterns": [
+        ""
+      ],
+      "responses": [
+        ""
+      ]
     }
-    ]
-  }
+  ]
+}
