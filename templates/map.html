@@ -1,0 +1,248 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>University Maps and Reviews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css"
+        integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='map.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css')}}" />
+    <link rel="icon" type="image/x-icon" href="../static/images/chat_favicon.svg">
+
+    <style>
+        #googleMap {
+            border-radius: 15px; /* Adjust the radius as needed */
+            overflow: hidden; /* Ensure content within the map is clipped to rounded corners */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="container hero-section">
+        <div class="row justify-content-center">
+            <div class="col-md-10 text-center">
+                <h1>University locations & Google Ratings</h1>
+                <p>Find Sri Lankan universities with on Google Map with ratings for informed decision-making.<br>Explore
+                    education options effortlessly.</p>
+                <hr>
+                <a href="/" class="btn btn-outline-warning btn-sm">Back to chat!</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="container hero-section">
+
+
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-xl-10 chat">
+                    <div id="googleMap" style="width:100%;height:600px;"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer mt-auto py-3 bg-transparent">
+        <div class="container text-center">
+            <span class="footer-text">© 2024 University Guider. A project by Group A 43 Students.</span>
+        </div>
+    </footer>
+        <script>
+            var map;
+            var infoWindow;
+
+            async function myMap() {
+
+
+                var mapProp = {
+                    center: new google.maps.LatLng(6.874257, 79.961245),
+                    zoom: 12,
+                };
+
+
+                map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                infoWindow = new google.maps.InfoWindow({ disableAutoPan: true, closeButton: false });
+
+                // Coordinates for the markers
+                var nsbm = new google.maps.LatLng(6.8213, 80.0416);
+                var sliit = new google.maps.LatLng(6.914682, 79.973329);
+                var nibm = new google.maps.LatLng(6.903663052, 79.868996524);
+                var apiit = new google.maps.LatLng(6.918613484035476, 79.8612225504093);
+                var iit = new google.maps.LatLng(6.865878658474629, 79.85985145651523);
+                var ACBT = new google.maps.LatLng(6.88746187566215, 79.8616517834167);
+                var Londontec = new google.maps.LatLng(6.864950771926306, 79.89610439503578);
+                var cinec = new google.maps.LatLng(6.869339188683875, 79.8881484257209);
+                var sltc = new google.maps.LatLng(6.929987748094107, 79.86148882387182);
+                var icbt = new google.maps.LatLng(6.8863912508489955, 79.86020691250296);
+                var esoft = new google.maps.LatLng(6.888845829114849, 79.85849203311892);
+
+                // Create markers and set their positions
+                var nsbm_marker = new google.maps.Marker({
+                    position: nsbm,
+                    map: map,
+                    title: "NSBM",
+                    placeId: "ChIJVVVVBTtS4joRiPT2mc00bFQ"
+                });
+
+                var sliit_marker = new google.maps.Marker({
+                    position: sliit,
+                    map: map,
+                    title: "SLIIT",
+                    placeId: "ChIJc5oFb9tW4joRu2RqmUzqX1U"
+                });
+
+                var nibm_marker = new google.maps.Marker({
+                    position: nibm,
+                    map: map,
+                    title: "NIBM",
+                    placeId: "ChIJEwfhCHlZ4joRnmTi8WDslFA"
+                });
+
+                var apiit_marker = new google.maps.Marker({
+                    position: apiit,
+                    map: map,
+                    title: "APIIT",
+                    placeId: "ChIJA5a98Tc3_4kR00qCNCzOHIk"
+                });
+
+                var iit_marker = new google.maps.Marker({
+                    position: iit,
+                    map: map,
+                    title: "IIT",
+                    placeId: "ChIJb66UWQBZ4joRjXf4ZTi32Hk"
+                });
+                var ACBT_marker = new google.maps.Marker({
+                    position: ACBT,
+                    map: map,
+                    title: "ACBT",
+                    placeId: "ChIJVV2oZl9b4joRJJBFSypOSUs"
+                });
+                var Londontec_marker = new google.maps.Marker({
+                    position: Londontec,
+                    map: map,
+                    title: "Londontec",
+                    placeId: "ChIJseEweF1a4joR-Iqe0xzmlng"
+                });
+                var cinec_marker = new google.maps.Marker({
+                    position: cinec,
+                    map: map,
+                    title: "cinec",
+                    placeId: "ChIJteXknNxX4joR5eUUp6y1MIQ"
+                });
+                var sltc_marker = new google.maps.Marker({
+                    position: sltc,
+                    map: map,
+                    title: "sltc",
+                    placeId: "ChIJ4UcDdBBZ4joR0o-XUTRymw0"
+                });
+                var icbt_marker = new google.maps.Marker({
+                    position: icbt,
+                    map: map,
+                    title: "icbt",
+                    placeId: "ChIJw-rE_cRb4joRuS7XNf3P5_0"
+                });
+                var esoft_marker = new google.maps.Marker({
+                    position: esoft,
+                    map: map,
+                    title: "esoft",
+                    placeId: "ChIJAZYZA8Nb4joRi21RZRPjIK4" // Place ID for IIT obtained from Google Maps
+                });
+
+                // Add event listeners to show and hide titles on marker hover
+                addMarkerListeners(nsbm_marker);
+                addMarkerListeners(sliit_marker);
+                addMarkerListeners(nibm_marker);
+                addMarkerListeners(apiit_marker);
+                addMarkerListeners(iit_marker);
+                addMarkerListeners(ACBT_marker);
+                addMarkerListeners(Londontec_marker);
+                addMarkerListeners(cinec_marker);
+                addMarkerListeners(sltc_marker);
+                addMarkerListeners(icbt_marker);
+                addMarkerListeners(esoft_marker);
+            }
+
+            // Function to add event listeners for marker hover
+            function addMarkerListeners(marker) {
+                marker.addListener('mouseover', function () {
+                    showInfoWindow(marker);
+                });
+                marker.addListener('mouseout', function () {
+                    infoWindow.close(); //
+                });
+                marker.addListener('click', function () {
+                    map.panTo(marker.getPosition()); // Pan the map to the marker's position
+                    map.setZoom(15); // Set desired zoom level
+                    showInfoWindow(marker); // Show info window for the clicked marker
+                });
+            }
+
+            function showInfoWindow(marker) {
+                var placeId = marker.placeId;
+                var service = new google.maps.places.PlacesService(map);
+
+                service.getDetails({
+                    placeId: placeId,
+                    fields: ['name', 'rating']
+                }, function (place, status) {
+                    if (status === google.maps.places.PlacesServiceStatus.OK) {
+                        var content = '<strong style="color: black;">' + place.name + '</strong><br>' +
+    '<span style="color: black;">Rating: ' + (place.rating ? place.rating : 'N/A') + '<span style="color: gold;"> &#9733;</span></span>';
+
+
+                        infoWindow.setContent(content);
+                        infoWindow.open(map, marker);
+                    } else {
+                        console.error('Error fetching place details:', status);
+                    }
+                });
+            }
+        </script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVy90FE4evtixL-8e0avAziJz0aajSI7I&libraries=places&callback=myMap"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
