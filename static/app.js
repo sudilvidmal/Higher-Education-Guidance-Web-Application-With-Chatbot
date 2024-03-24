@@ -16,11 +16,16 @@ $(document).ready(function(){
             data: JSON.stringify({ message: message }),
             success: function(response){
                 var botResponse = response.answer;
-                $("#messageFormeight").append(`
-                    <div class="d-flex justify-content-start mb-4">
-                        <div class="msg_cotainer">${botResponse}</div>
-                    </div>`
-                );
+                var responseParts = botResponse.split('\n'); // Split response by newline character
+
+                // Append each part as a separate message
+                responseParts.forEach(function(part) {
+                    $("#messageFormeight").append(`
+                        <div class="d-flex justify-content-start mb-4">
+                            <div class="msg_cotainer">${part}</div>
+                        </div>`
+                    );
+                });
 
                 // Check if feedback is requested
                 if (response.feedback_request === "true") {

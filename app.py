@@ -15,7 +15,7 @@ def store_feedback(feedback_text):
     try:
         print("Feedback:", feedback_text)
         # Connect to the database
-        conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=DESKTOP-3OVJ75D\\SQLEXPRESS;DATABASE=chatbot;UID=siriahk;PWD=123')
+        conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=DESKTOP-K653L1C\SQLEXPRESS;DATABASE=chatbot;UID=siriahk;PWD=123')
 
         cursor = conn.cursor()
         
