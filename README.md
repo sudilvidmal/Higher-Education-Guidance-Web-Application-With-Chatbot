@@ -30,8 +30,6 @@ A smart web platform to help students explore higher education opportunities wit
 
 Make sure you have **Python 3.7+** installed.
 
-### ✅ Create a Virtual Environment
-
 ```bash
 python3 -m venv venv
 
